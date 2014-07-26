@@ -11,6 +11,8 @@ RUN wget -O - http://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | apt-key 
 RUN wget -O /etc/apt/sources.list.d/mosquitto-repo.list http://repo.mosquitto.org/debian/mosquitto-repo.list
 RUN apt-get update && apt-get install -y mosquitto
 
+RUN adduser --system --disabled-password --disabled-login mosquitto
+
 COPY config /mqtt/config
 VOLUME ["/mqtt/config", "/mqtt/data", "/mqtt/log"]
 
