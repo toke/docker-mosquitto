@@ -12,7 +12,7 @@ RUN wget -O /etc/apt/sources.list.d/mosquitto-repo.list http://repo.mosquitto.or
 RUN apt-get update && apt-get install -y mosquitto
 
 COPY config /mqtt/config
-VOLUME ["/mqtt/config", "/mqtt/data"]
+VOLUME ["/mqtt/config", "/mqtt/data", "/mqtt/log"]
 
 
 EXPOSE 1883
