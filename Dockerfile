@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Thomas Kerpe <thomas@kerpe.net>
+MAINTAINER Thomas Kerpe <toke@toke.de>
 
 
 RUN apt-get update
