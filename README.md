@@ -5,7 +5,7 @@ Docker image for mosquitto
 
 ## Run
 
-  docker run -tip 1883:1883 toke/mosquitto
+    docker run -tip 1883:1883 toke/mosquitto
 
 Exposes Port 1883
 
