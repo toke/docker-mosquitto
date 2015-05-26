@@ -20,8 +20,9 @@ persistent and change the configuration.
     # to allow the user to read/write to data and log and read from
     # config directory
     # For TESTING purposes you can use chmod -R 777 /srv/mqtt/*
+    # Better use "-u" with a valid user id on your docker host
     
-    docker run -ti --rm -p 1883:1883 \
+    docker run -ti -p 1883:1883 \
     -v /srv/mqtt/config:/mqtt/config:ro \
     -v /srv/mqtt/log:/mqtt/log \
     -v /srv/mqtt/data/:/mqtt/data/ \
