@@ -5,9 +5,9 @@ Docker image for mosquitto
 
 ## Run
 
-    docker run -tip 1883:1883 toke/mosquitto
+    docker run -tip 1883:1883 -p 9001:9001 toke/mosquitto
 
-Exposes Port 1883
+Exposes Port 1883 (MQTT) 9001 (Websocket MQTT)
 
 Alternatively you can use volumes to make the changes
 persistent and change the configuration.
@@ -21,16 +21,12 @@ persistent and change the configuration.
     # config directory
     # For TESTING purposes you can use chmod -R 777 /srv/mqtt/*
     # Better use "-u" with a valid user id on your docker host
-    
-    docker run -ti -p 1883:1883 \
+
+    docker run -ti -p 1883:1883 -p 9001:9001 \
     -v /srv/mqtt/config:/mqtt/config:ro \
     -v /srv/mqtt/log:/mqtt/log \
     -v /srv/mqtt/data/:/mqtt/data/ \
-    --name mqtt toke/mosquitto 
+    --name mqtt toke/mosquitto
 
 
 Volumes: /mqtt/config, /mqtt/data and /mqtt/log
-
-
-
-
