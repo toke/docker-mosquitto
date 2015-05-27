@@ -30,3 +30,10 @@ persistent and change the configuration.
 
 
 Volumes: /mqtt/config, /mqtt/data and /mqtt/log
+
+
+## Build
+
+    git clone https://github.com/toke/docker-mosquitto.git
+    cd docker-mosquitto
+    docker build .
