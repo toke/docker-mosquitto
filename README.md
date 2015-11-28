@@ -3,9 +3,19 @@ docker-mosquitto
 
 Docker image for mosquitto
 
+## Setup for Data Persistence
+
+Create three directories on your host:
+
+* /src/mqtt/config
+* /src/mqtt/data
+* /src/mqtt/log
+
+Copy the files from the config directory of this project into /src/mqtt/config. Change them as needed for your particular needs.
+
 ## Run
 
-    docker run -tip 1883:1883 -p 9001:9001 toke/mosquitto
+    docker run -ti -p 1883:1883 -p 9001:9001 toke/mosquitto
 
 Exposes Port 1883 (MQTT) 9001 (Websocket MQTT)
 
@@ -28,9 +38,7 @@ persistent and change the configuration.
     -v /srv/mqtt/data/:/mqtt/data/ \
     --name mqtt toke/mosquitto
 
-
 Volumes: /mqtt/config, /mqtt/data and /mqtt/log
-
 
 ## Build
 
