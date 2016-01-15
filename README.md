@@ -5,6 +5,8 @@ Docker image for mosquitto
 
 [![Docker Stars](https://img.shields.io/docker/stars/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
+[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
 
 ## Setup for Data Persistence
 
