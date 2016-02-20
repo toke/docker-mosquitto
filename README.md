@@ -51,3 +51,11 @@ Volumes: /mqtt/config, /mqtt/data and /mqtt/log
     git clone https://github.com/toke/docker-mosquitto.git
     cd docker-mosquitto
     docker build .
+
+## Authors and license
+
+docker-mosquitto was written by:
+
+* Thomas Kerpe | [web](https://toke.de/) | [mail](mailto:web@toke.de) | [GitHub](https://github.com/toke/)
+
+License: [BSD 3-Clause](https://tldrlegal.com/license/bsd-3-clause-license-%28revised%29)
