@@ -57,8 +57,10 @@ Volumes: /mqtt/config, /mqtt/data and /mqtt/log
 docker-mosquitto was written by:
 
 * **Thomas Kerpe** | [web](https://toke.de/) | [mail](mailto:web@toke.de) | [GitHub](https://github.com/toke/)
-* [m0se](https://github.com/m0se)
-* [David Medinets](https://github.com/medined)
-* [Gavin de Kock](https://github.com/gavindekock)
+* With contributions from:
+ * [m0se](https://github.com/m0se)
+ * [David Medinets](https://github.com/medined)
+ * [Gavin de Kock](https://github.com/gavindekock)
+ * [Raphael Ahrens](https://github.com/tantSinnister)
 
 License: [BSD 3-Clause](https://tldrlegal.com/license/bsd-3-clause-license-%28revised%29)
