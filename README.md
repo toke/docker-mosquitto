@@ -9,21 +9,16 @@ Docker image for mosquitto
 [![ImageLayers Size](https://img.shields.io/imagelayers/image-size/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
 [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
 
-## Setup for Data Persistence
-
-Create three directories on your host:
-
-* /src/mqtt/config
-* /src/mqtt/data
-* /src/mqtt/log
-
-Copy the files from the config directory of this project into /src/mqtt/config. Change them as needed for your particular needs.
-
 ## Run
 
     docker run -ti -p 1883:1883 -p 9001:9001 toke/mosquitto
 
 Exposes Port 1883 (MQTT) 9001 (Websocket MQTT)
+
+## Running with persistence
+
+
+### Local directories
 
 Alternatively you can use volumes to make the changes
 persistent and change the configuration.
@@ -38,6 +33,8 @@ persistent and change the configuration.
     # For TESTING purposes you can use chmod -R 777 /srv/mqtt/*
     # Better use "-u" with a valid user id on your docker host
 
+    Copy the files from the config directory of this project into /src/mqtt/config. Change them as needed for your particular needs.
+
     docker run -ti -p 1883:1883 -p 9001:9001 \
     -v /srv/mqtt/config:/mqtt/config:ro \
     -v /srv/mqtt/log:/mqtt/log \
@@ -45,6 +42,19 @@ persistent and change the configuration.
     --name mqtt toke/mosquitto
 
 Volumes: /mqtt/config, /mqtt/data and /mqtt/log
+
+### Docker Volumes for persistence
+
+Using [Docker Volumes](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
+for persistence.
+
+Create a named volume:
+
+    docker volume create --name mosquitto_data
+
+Now it can be attached to docker by using `-v mosquitto_data:/mqtt/data` in the
+Example above. Be aware that the permissions within the volumes
+are most likely too restrictive.
 
 ## Build
 
