@@ -16,4 +16,8 @@ VOLUME ["/mqtt/config", "/mqtt/data", "/mqtt/log"]
 
 
 EXPOSE 1883 9001
-CMD /usr/sbin/mosquitto -c /mqtt/config/mosquitto.conf
+
+ADD docker-entrypoint.sh /usr/bin/
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["/usr/sbin/mosquitto", "-c", "/mqtt/config/mosquitto.conf"]
