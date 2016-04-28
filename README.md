@@ -68,6 +68,7 @@ docker-mosquitto was written by:
 
 * **Thomas Kerpe** | [web](https://toke.de/) | [mail](mailto:web@toke.de) | [GitHub](https://github.com/toke/)
 * With contributions from:
+ * [Andrea Pinazzi](https://github.com/onip)
  * [m0se](https://github.com/m0se)
  * [David Medinets](https://github.com/medined)
  * [Gavin de Kock](https://github.com/gavindekock)
