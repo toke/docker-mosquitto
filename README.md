@@ -56,6 +56,27 @@ Now it can be attached to docker by using `-v mosquitto_data:/mqtt/data` in the
 Example above. Be aware that the permissions within the volumes
 are most likely too restrictive.
 
+### Start with systemd
+
+As an example this how you run the container with systemd.
+
+    [Unit]
+    Description=Mosquitto MQTT docker container
+    Requires=docker.service
+    After=docker.service
+
+    [Service]
+    Environment=EXT_IP=123.123.123.123
+    Restart=always
+    ExecStart=/usr/bin/docker run -v /srv/mqtt/config:/mqtt/config -v /srv/mqtt/log:/mqtt/log -v mqtt-persistence:/mqtt/data/ -p ${EXT_IP}:1883:1883 -p ${EXT_IP}:8883:8883 -p 127.0.0.1:9001:9001 --name mqtt toke/mosquitto
+    ExecStop=/usr/bin/docker stop -t 2 mqtt
+    ExecStopPost=/usr/bin/docker rm -f mqtt
+
+    [Install]
+    WantedBy=local.target
+
+
+
 ## Build
 
     git clone https://github.com/toke/docker-mosquitto.git
