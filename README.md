@@ -59,6 +59,7 @@ are most likely too restrictive.
 ### Start with systemd
 
 As an example this how you run the container with systemd.
+The example uses a docker volume named `mosquitto_data` (see above).
 
     [Unit]
     Description=Mosquitto MQTT docker container
@@ -74,7 +75,6 @@ As an example this how you run the container with systemd.
 
     [Install]
     WantedBy=local.target
-
 
 
 ## Build
