@@ -18,7 +18,7 @@ Exposes Port 1883 (MQTT) 9001 (Websocket MQTT)
 ## Running with persistence
 
 
-### Local directories
+### Local directories / External Configuration
 
 Alternatively you can use volumes to make the changes
 persistent and change the configuration.
