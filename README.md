@@ -6,8 +6,8 @@ Docker image for mosquitto
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chadoe/docker-cleanup-volumes/master/LICENSE)
 [![Docker Stars](https://img.shields.io/docker/stars/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
-[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/toke/mosquitto/latest.svg)](https://hub.docker.com/r/toke/mosquitto/)
+[![](https://images.microbadger.com/badges/image/toke/mosquitto.svg)](https://microbadger.com/images/toke/mosquitto "Get your own image badge on microbadger.com")
+
 
 ## Run
 
