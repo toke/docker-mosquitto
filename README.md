@@ -32,7 +32,9 @@ persistent and change the configuration.
     # For TESTING purposes you can use chmod -R 777 /srv/mqtt/*
     # Better use "-u" with a valid user id on your docker host
 
-    Copy the files from the config directory of this project into /src/mqtt/config. Change them as needed for your particular needs.
+    # Copy the files from the config directory of this project
+    # into /src/mqtt/config. Change them as needed for your
+    # particular needs.
 
     docker run -ti -p 1883:1883 -p 9001:9001 \
     -v /srv/mqtt/config:/mqtt/config:ro \
@@ -44,8 +46,7 @@ Volumes: /mqtt/config, /mqtt/data and /mqtt/log
 
 ### Docker Volumes for persistence
 
-Using [Docker Volumes](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
-for persistence.
+Using [Docker Volumes](https://docs.docker.com/engine/userguide/containers/dockervolumes/) for persistence.
 
 Create a named volume:
 
@@ -55,7 +56,7 @@ Now it can be attached to docker by using `-v mosquitto_data:/mqtt/data` in the
 Example above. Be aware that the permissions within the volumes
 are most likely too restrictive.
 
-### Start with systemd
+## Start with systemd
 
 As an example this how you run the container with systemd.
 The example uses a docker volume named `mosquitto_data` (see above).
