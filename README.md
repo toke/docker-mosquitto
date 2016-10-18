@@ -69,7 +69,7 @@ The example uses a docker volume named `mosquitto_data` (see above).
     [Service]
     Environment=EXT_IP=123.123.123.123
     Restart=always
-    ExecStart=/usr/bin/docker run -v /srv/mqtt/config:/mqtt/config -v /srv/mqtt/log:/mqtt/log -v mqtt-persistence:/mqtt/data/ -p ${EXT_IP}:1883:1883 -p ${EXT_IP}:8883:8883 -p 127.0.0.1:9001:9001 --name mqtt toke/mosquitto
+    ExecStart=/usr/bin/docker run -v /srv/mqtt/config:/mqtt/config -v /srv/mqtt/log:/mqtt/log -v mosquitto_data:/mqtt/data/ -p ${EXT_IP}:1883:1883 -p ${EXT_IP}:8883:8883 -p 127.0.0.1:9001:9001 --name mqtt toke/mosquitto
     ExecStop=/usr/bin/docker stop -t 2 mqtt
     ExecStopPost=/usr/bin/docker rm -f mqtt
 
