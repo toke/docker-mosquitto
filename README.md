@@ -64,6 +64,7 @@ The example uses a docker volume named `mosquitto_data` (see above).
     [Unit]
     Description=Mosquitto MQTT docker container
     Requires=docker.service
+    Wants=docker.service
     After=docker.service
 
     [Service]
