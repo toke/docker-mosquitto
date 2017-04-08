@@ -97,3 +97,9 @@ docker-mosquitto was written by:
  * [Raphael Ahrens](https://github.com/tantSinnister)
 
 License: [BSD 3-Clause](https://tldrlegal.com/license/bsd-3-clause-license-%28revised%29)
+
+
+## Contact
+
+Contact: Thomas Kerpe [toke@toke.de](mailto:toke@toke.de)
+OpenPGP fingerprint: `B5AD 7FCB 270D A762 46D2  A8F2 B0E6 5607 ABE5 7238`
