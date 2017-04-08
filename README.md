@@ -84,6 +84,13 @@ The example uses a docker volume named `mosquitto_data` (see above).
     cd docker-mosquitto
     docker build .
 
+## Other Containers
+
+The puprose of this Container was to provide a configurable and dsecent mosquitto broker.
+The Eclipse Mosquitto Project now provides a very similar Container:
+[Eclipse Mosquitto Container](https://hub.docker.com/_/eclipse-mosquitto/) It should be
+easy to migrate to it.
+
 ## Authors and license
 
 docker-mosquitto was written by:
