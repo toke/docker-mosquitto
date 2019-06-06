@@ -8,6 +8,15 @@ Docker image for mosquitto
 [![](https://images.microbadger.com/badges/image/toke/mosquitto.svg)](https://microbadger.com/images/toke/mosquitto "Get your own image badge on microbadger.com")
 
 
+## Project Status
+
+The puprose of this Container was to provide a configurable and decent mosquitto broker container. The Eclipse Mosquitto Project now provides
+a very similar Container - See [Other Containers](#other-containers) below.
+This container still uses Debian/Jessie as a base container which is kinda old.
+
+Feel free to send Pull Requests. As I don't use this container any longer it's 
+kinda tricky to test and keep compatibility at a level I would like.
+
 ## Run
 
     docker run -ti -p 1883:1883 -p 9001:9001 toke/mosquitto
