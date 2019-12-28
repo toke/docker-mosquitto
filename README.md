@@ -1,7 +1,7 @@
 docker-mosquitto
 ================
 
-Docker image for mosquitto
+Docker image for mosquitto - superseded by [eclipse-mosquitto](https://hub.docker.com/_/eclipse-mosquitto)
 
 [![Docker Stars](https://img.shields.io/docker/stars/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/toke/mosquitto.svg)](https://hub.docker.com/r/toke/mosquitto/)
